@@ -1,0 +1,207 @@
+/*Variaveis*/
+:root {
+  --brancoPrincipal: #ffffff;
+  --cinzaSecundario: #c0c0c0;
+  --botaoAzul: #167bf7;
+  --corFundo: #00030c;
+  --fontePrincipal: 'Inter';
+  --botaoAzulEfeito: #3c92fa;
+}
+
+/*zerar a pagina*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--corFundo);
+
+  /*para o texto*/
+  color: var(--brancoPrincipal);
+  font-family: var(--fontePrincipal);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* -------------------------------------- Parte 1 --------------------------------- */
+.principal {
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  align-items: center; /*como definiu como colunas então ele ficará alinhado de acordo com essa coluna*/
+  text-align: center; /*nao so alinhou o texto mais tbm a imagem juntos pois estava dentro por causa do display block*/
+
+}
+
+.container {
+  height: 100vh; 
+
+  display: grid;
+  grid-template-columns: 50% 50%; /*colunas*/
+}
+
+.container__botao {
+  background-color: var(--botaoAzul);
+  border-radius: 5px;
+  padding: 1em;
+
+  color: var(--brancoPrincipal);
+  display: block;
+  text-decoration: none; /*tirar o sublinhado*/
+
+  margin-bottom: 1em; /*espaçamentos entre botões e o "aviso"*/
+}
+
+.botao_segundario {
+  background-color: transparent; /*para o botão ficar transparente*/
+  border: 2px solid var(--brancoPrincipal);
+}
+
+.container__aviso {
+  font-size: 12px;
+  color: var(--cinzaSecundario);
+}
+
+.container__titulo {
+  font-size: 28px;
+  font-weight: 700; /*peso da fonte*/
+}
+
+.container__imagem {
+  margin: 1em 0 2em 0; /*espaçamento - titulo e imagem / imagem e botões*/
+
+}
+
+.container__caixa {
+  margin: 0 6em; /*espaçamento do top e da direita*/
+
+}
+
+
+
+/* ------------------------------------ Parte 2 --------------------------------------*/
+.secundario__imagem {
+  width: 80%;
+
+}
+
+.secundario {
+  align-items: center;
+  margin: 0 10em;
+}
+
+.descricao__titulo {
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--brancoPrincipal);
+  margin-bottom: 0.1em; /*espaçamento*/
+}
+
+.descricao__texto {
+  color: var(--cinzaSecundario);
+}
+
+
+
+/* ------------------------------------ Parte 3 --------------------------------------*/
+.secundario__botao {
+  display: inline-block; /*tenta pegar as melhores partes dos 2s*/
+  margin-top: 1em;
+}
+
+.container__descricao {
+  padding: 2em;
+}
+
+
+
+/* ------------------------------------ Parte 4 --------------------------------------*/
+
+/* foi ultilizado as mesmas configurações e alinhamentos da "parte 2" por tanto não foi preciso mexer
+no Css somente no HTML */
+
+
+
+/* ------------------------------------ Parte 5 --------------------------------------*/
+.dispositivos__lista {
+  display: flex; /*alinhar um do lado do outro*/
+  justify-content: center;
+  list-style-type: none; /*para sair os pontinhos da lista, significa "nenhum estilo da lista."*/
+  margin: 5em 0;
+}
+
+.dispositivos {
+  text-align: center;
+}
+
+.dispositivos__titulo {
+  font-size: 48px;
+  color: var(--brancoPrincipal);
+}
+
+.lista__item {
+  font-size: 32px;
+  color: var(--brancoPrincipal);
+}
+
+
+/*Footer*/
+
+
+
+
+/*cor do link*/
+
+.rodape__texto {
+  color: var(--cinzaSecundario);
+  font-size: 14px;
+  margin: 2em 0;
+  
+}
+
+.lista__link {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0.3em;
+   
+}
+
+.lista__link a {
+  color: var(--brancoPrincipal);
+  text-decoration: none; /*tirar o sublinhado  */
+  
+}
+
+
+.rodape {
+  text-align: center;
+  margin: 0 3em ;
+  
+
+}
+.rodape__logo {
+  margin-bottom: 2em;
+ 
+}
+
+/*efeitos:*/
+
+
+.lista__link a:hover{ /*quando passar o mouse em cima*/
+  color: var(--botaoAzul);
+  text-decoration: none;
+}
+
+.lista__link a:active { /*quando clicar e segurar no link*/
+  color: var(--cinzaSecundario);
+}
+
+.container__botao:hover { /*para mudar a cor do botao e a fonte quando passar o mouse em cima*/
+  background-color: var(--botaoAzulEfeito);
+  color: var(--corFundo);
+
+}
+
+
